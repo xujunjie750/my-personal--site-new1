@@ -40,7 +40,7 @@ export default async function handler(req) {
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'qwen-plus',
+                model: 'qwen2.5-7b-instruct',
         input: {
           messages: [systemPrompt, ...messages]
         },
