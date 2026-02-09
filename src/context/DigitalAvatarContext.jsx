@@ -1,7 +1,11 @@
-// This file is created to resolve the build error.
-// Please add the necessary context logic here.
-import React from 'react';
-
-const DigitalAvatarContext = React.createContext();
-
-export default DigitalAvatarContext;
+import React, { createContext, useContext, useState } from 'react'; 
+ const DigitalAvatarContext = createContext(); 
+ export const useDigitalAvatar = () => useContext(DigitalAvatarContext); 
+ export const DigitalAvatarProvider = ({ children }) => { 
+   const [isChatOpen, setIsChatOpen] = useState(false); 
+   return ( 
+     <DigitalAvatarContext.Provider value={{ isChatOpen, setIsChatOpen }}> 
+       {children} 
+     </DigitalAvatarContext.Provider> 
+   ); 
+ };
