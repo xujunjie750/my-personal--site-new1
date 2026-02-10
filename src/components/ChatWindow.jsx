@@ -46,4 +46,4 @@ const handleSend = async () => {
     } finally {
       setIsTyping(false);
     }
-  };
+  };export default ChatWindow;
