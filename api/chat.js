@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${process.env.MODELSCOPE_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "Qwen/Qwen2.5-7B-Instruct",
+        model: "qwen2.5-7b-instruct",
         messages: [
           {
             role: "system",
